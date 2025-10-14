@@ -110,9 +110,17 @@ coverage/
 # Secrets and keys
 *.pem
 *.key
+*.crt
+*.p12
+*.pfx
 secrets/
 vault/
+.secrets/
 
 # Data directories
 data/
 volumes/
+
+# Security scan results
+trivy-results.sarif
+security-scan-results/
