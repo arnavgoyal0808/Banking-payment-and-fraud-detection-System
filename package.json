@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "Enterprise Payment Gateway Platform",
   "scripts": {
-    "build": "lerna run build",
-    "start": "lerna run start",
-    "start:dev": "lerna run start:dev",
-    "test": "lerna run test",
-    "test:all": "lerna run test --parallel",
-    "lint": "lerna run lint",
+    "build": "npm run build --workspaces --if-present",
+    "start": "npm run start --workspaces --if-present",
+    "start:dev": "npm run start:dev --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:all": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces --if-present",
     "setup": "./scripts/setup.sh"
   },
   "workspaces": [
-    "services/*",
-    "libs/*"
+    "services/*"
   ],
   "devDependencies": {
     "lerna": "^8.1.8",
