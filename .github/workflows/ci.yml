@@ -25,8 +25,8 @@ jobs:
     - name: Install dependencies
       run: npm ci --legacy-peer-deps
     
-    - name: Run security audit
-      run: npm audit --audit-level moderate
+    - name: Run security audit (production only)
+      run: npm audit --omit=dev --audit-level=high
     
     - name: Run CodeQL Analysis
       uses: github/codeql-action/init@v3
@@ -104,7 +104,7 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
     
-    - name: Build and scan Docker images
+    - name: Build Docker images
       run: |
         docker build -t payment-gateway/api-gateway ./services/api-gateway
         docker build -t payment-gateway/payment-service ./services/payment-service

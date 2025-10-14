@@ -17,7 +17,7 @@
     "@nestjs/platform-express": "^10.4.4",
     "@nestjs/typeorm": "^10.0.2",
     "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.1",
+    "joi": "^17.13.3",
     "kafkajs": "^2.2.4",
     "pg": "^8.13.0",
     "redis": "^4.7.0",
@@ -28,15 +28,12 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "@nestjs/cli": "^1.8.0",
+    "@nestjs/cli": "^10.4.5",
     "@nestjs/testing": "^10.4.4",
     "@types/node": "^22.7.5",
     "@types/pg": "^8.11.10",
     "@types/uuid": "^10.0.0",
     "jest": "^29.7.0",
     "typescript": "^5.6.3"
-  },
-  "overrides": {
-    "validator": "^13.12.0"
   }
 }
